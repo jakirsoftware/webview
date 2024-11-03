@@ -1,5 +1,6 @@
-package js.web.khamarbari;
+package js.web;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private WebView webView;
     private ProgressDialog progressDialog;
-    private static final String URL = "https://www.appsheet.com/start/471e8494-355d-4d37-98b4-69425828cac9";
+    private static final String URL = "https://www.appsheet.com/start/0f100ca1-67a7-4477-a6fa-d19b3e07b26c";
     private static final String USER_AGENT = "Mozilla/5.0 (Linux; Android " + Build.VERSION.RELEASE + ")";
 
     @Override
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         loadWebsite();
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private void configureWebView() {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
